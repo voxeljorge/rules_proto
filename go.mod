@@ -1,6 +1,8 @@
 module github.com/stackb/rules_proto
 
-go 1.18
+go 1.21.4
+
+toolchain go1.23.0
 
 require (
 	github.com/bazelbuild/bazel-gazelle v0.35.0
@@ -22,4 +24,5 @@ require (
 	golang.org/x/sync v0.5.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/tools/go/vcs v0.1.0-deprecated // indirect
+	google.golang.org/protobuf v1.33.0 // indirect
 )

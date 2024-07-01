@@ -4,12 +4,15 @@ go_library(
     name = "bufbuild",
     srcs = [
         "connect_es_plugin.go",
+        "connect_go_plugin.go",
         "es_plugin.go",
     ],
     importpath = "github.com/stackb/rules_proto/pkg/plugin/bufbuild",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/protoc",
+        "//pkg/plugin/golang/protobuf",
+        "@com_github_emicklei_proto//:proto",
         "@bazel_gazelle//label:go_default_library",
     ],
 )

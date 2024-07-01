@@ -2,6 +2,7 @@ package protobuf
 
 import (
 	"container/list"
+	"fmt"
 	"path"
 	"strings"
 
@@ -43,6 +44,7 @@ func (p *ProtocGenGoPlugin) Configure(ctx *protoc.PluginContext) *protoc.PluginC
 	for k, v := range mappings {
 		// "option" is used as the name since we cannot leave that part of the
 		// label empty.
+		fmt.Println("protoc-gen-go-mapping:"+k+"="+v)
 		protoc.GlobalResolver().Provide("proto", "M", k, label.New("", v, "option")) // FIXME(pcj): should this not be config.RepoName?
 	}
 
